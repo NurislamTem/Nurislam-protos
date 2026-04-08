@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package user;
+
+option go_package = "github.com/YOUR_USERNAME/yourname-protos/user;userpb";
+
+service UserService {
+  rpc GetUser (GetUserRequest) returns (GetUserResponse);
+}
+
+message GetUserRequest {
+  int64 id = 1;
+}
+
+message GetUserResponse {
+  string name = 1;
+  string email = 2;
+}
